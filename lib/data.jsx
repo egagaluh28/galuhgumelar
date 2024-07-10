@@ -1,8 +1,8 @@
 import Favicon from '@/public/images/favicon.png';
 
 export const mainData = {
-    websiteTitle: 'Mone - Personal Portfolio Template',
-    description: 'Personal Portfolio Template',
-    keywords: 'mone, portfolio, vCard',
+    websiteTitle: 'Muhammad Galuh Gumelar',
+    description: 'Muhammad Galuh Gumelar',
+    keywords: 'Muhammad Galuh Gumelar',
     favicon: Favicon,
 };

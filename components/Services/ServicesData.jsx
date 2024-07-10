@@ -15,13 +15,13 @@ export const servicesData = {
             number: '02',
             bootstrapIcon: 'bi bi-code-slash',
             title: 'Web Development',
-            description: 'Skilled in modern web technologies (HTML, CSS, JavaScript) and frameworks (React, Laravel, Next.js). Expertise in responsive, secure, and high-performance website development.',
+            description: 'Skilled in modern web technologies (HTML, CSS, JavaScript) and frameworks (Bootstrap, Tailwind, React, Laravel, Next.js). Expertise in responsive, secure, and high-performance website development.',
         },
-        {
-            number: '03',
-            bootstrapIcon: 'bi bi-laptop',
-            title: 'Marketing',
-            description: 'Specializing in SEO, social media, and PPC campaigns. Creating compelling content and utilizing analytics to boost online visibility and conversions.',
-        },
+        // {
+        //     number: '03',
+        //     bootstrapIcon: 'bi bi-laptop',
+        //     title: 'Marketing',
+        //     description: 'Specializing in SEO, social media, and PPC campaigns. Creating compelling content and utilizing analytics to boost online visibility and conversions.',
+        // },
     ]    
 };

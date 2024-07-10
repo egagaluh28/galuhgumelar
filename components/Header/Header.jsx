@@ -63,12 +63,12 @@ const Header = () => {
 								<li className="nav-item">
 									<Link className="nav-link" href="/#resume"><i className="bi bi-arrow-right"></i>Resume</Link>
 								</li>
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<Link className="nav-link" href="/#testimonial"><i className="bi bi-arrow-right"></i>Testimonial</Link>
 								</li>
 								<li className="nav-item">
 									<Link className="nav-link" href="/#blog"><i className="bi bi-arrow-right"></i>Blog</Link>
-								</li>
+								</li> */}
 								<li className="nav-item">
 									<Link className="nav-link" href="/#contact"><i className="bi bi-arrow-right"></i>Contact</Link>
 								</li>

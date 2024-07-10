@@ -3,7 +3,7 @@ import HeroAvatar from '@/public/images/ega3.jpg';
 export const aboutData = {
     mainData: {
         heroAvatar: HeroAvatar,
-        biography: "I’m a Software Developer, but now mainly focused on Fullstack and UI/UX Design",
+        biography: "I’m a Software Developer, but now mainly focused on Fullstack Web and UI/UX Design",
         projectsDone: "12",
         yearsOfExperience: "2",
         worldwideClients: "28",
@@ -15,15 +15,15 @@ export const aboutData = {
         {
             name: 'UI & UX Design',
         },
-        {
-            name: 'Marketing',
-        },
-        {
-            name: 'SEO',
-        },
-        {
-            name: 'Management',
-        },
+        // {
+        //     name: 'Marketing',
+        // },
+        // {
+        //     name: 'SEO',
+        // },
+        // {
+        //     name: 'Management',
+        // },
     ],
     connect: [
         {

@@ -4,18 +4,6 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Impor data peta Anda
-import { mapData } from './MapData';
-
-
-// Setel ikon untuk marker
-delete L.Icon.Default.prototype._getIconUrl;
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-});
-
 const containerStyle = {
   width: '100%',
   height: '400px',
@@ -25,9 +13,17 @@ const containerStyle = {
 };
 
 const center = {
-  lat: mapData.mainData.lat,
-  lng: mapData.mainData.lng
+  lat: -6.593393667422204,
+  lng: 106.80533332416417,
 };
+
+// Setel ikon untuk marker
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
 
 const MapComponent = () => {
   return (
@@ -38,7 +34,7 @@ const MapComponent = () => {
       />
       <Marker position={center}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          Urang sini <br /> barudak
         </Popup>
       </Marker>
     </MapContainer>

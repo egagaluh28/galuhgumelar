@@ -24,9 +24,9 @@ export default function Home() {
                 {/* Awards section */}
                 <Resume />
                 {/* Testimonial section */}
-                <Testimonial />
+                {/* <Testimonial /> */}
                 {/* Blog section */}
-                <Blog />
+                {/* <Blog /> */}
                 {/* Contact section */}
                 <Contact />
                 {/* Footer section */}

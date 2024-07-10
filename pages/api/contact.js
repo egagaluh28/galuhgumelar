@@ -1,33 +1,41 @@
-export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        const { name, email, message, subject } = req.body;
-        const to = process.env.NEXT_PUBLIC_MAIL_TO_ADDRESS;
-        const body = `From: ${name}<br>E-Mail: ${email}<br>Message:<br>${message}`;
+import nodemailer from "nodemailer";
 
-        const nodemailer = require('nodemailer');
-        const transporter = nodemailer.createTransport({
-            host: process.env.NEXT_PUBLIC_MAIL_HOST,
-            port: process.env.NEXT_PUBLIC_MAIL_PORT,
-            secure: process.env.NEXT_PUBLIC_MAIL_USE_TLS,
-            auth: {
-                user: process.env.NEXT_PUBLIC_MAIL_USERNAME,
-                pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
-            }
-        });
+const contact = async (req, res) => {
+    const { name, email, message, subject } = req.body;
 
-        try {
-            await transporter.sendMail({
-                from: email,
-                to,
-                subject: `New Message from Website: ${subject}`,
-                html: body,
-            });
-            res.status(200).json({ message: 'Email sent successfully' });
-        } catch (error) {
-            console.error(error);
-            res.status(500).json({ error: 'Error sending email' });
+    // Create a Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true, // use SSL
+        auth: {
+            user: process.env.MY_APP_EMAIL,
+            pass: process.env.MY_APP_PASS
         }
-    } else {
-        res.status(405).end();
+    });
+
+    // Email content
+    const mailOptions = {
+        from: email, // sender address
+        to: 'process.env.MY_EMAIL_RECEIVER', // list of receivers (replace with your actual recipient email address)
+        replyTo : email,
+        subject: `Anda mendapatkan pesan dari ${name}`,
+        html: `<p>Name: ${name}</p>
+               <p>Email: ${email}</p>
+               <p>Subject: ${subject}</p>
+               <p>Message: ${message}</p>`
+    };
+
+    try {
+        // Send email
+        await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully');
+        res.status(200).json({ message: 'Email sent successfully' });
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ message: 'Error sending email' });
     }
-}
+
+};
+
+export default contact;
