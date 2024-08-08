@@ -17,7 +17,7 @@ const contact = async (req, res) => {
     // Email content
     const mailOptions = {
         from: email, // sender address
-        to: 'process.env.MY_EMAIL_RECEIVER', // list of receivers (replace with your actual recipient email address)
+        to: 'process.env.MY_EMAIL_RECEIVER',
         replyTo : email,
         subject: `Anda mendapatkan pesan dari ${name}`,
         html: `<p>Name: ${name}</p>
